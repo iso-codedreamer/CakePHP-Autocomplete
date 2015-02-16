@@ -28,7 +28,7 @@ for initializing
 
 echo $this->Autocomplete->setAutocomplete(array( <br>
 	'element' => 'id', <br>
-	'url' => 'http://localhost', <br>
+	'url' => 'http://localhost/autocomplete', <br>
 	'model' => 'pages', <br> 
 	'field' => 'title', <br> 
 	'order' => 'ASC', <br>
