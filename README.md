@@ -7,6 +7,10 @@ HTTP Server. For example: Apache.
 PHP 5.2.8 or greater.
 CakePHP 2.5.1+
 
+<h2>Dependencies</h2>
+
+jQuery UI Autocomplete
+
 <h2>Installation</h2>
 
 - upload Config, Controller, View and webroot folder in the /app/Plugin/Autocomplete folder
