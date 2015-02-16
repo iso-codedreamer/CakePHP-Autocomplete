@@ -12,7 +12,7 @@ CakePHP 2.5.1+
 - upload Config, Controller, View and webroot folder in the /app/Plugin/Autocomplete folder
 - activate the plugin in /app/Config/bootstrap.php
 
-CakePlugin::loadAll(array(
+CakePlugin::loadAll(array( <br>
     'Autocomplete' => array('bootstrap' => true, 'routes' => true)
 ));
 
@@ -22,20 +22,18 @@ public $helpers = array('Autocomplete.Autocomplete');
 
 <h3>In the View</h3>
 
-<?php echo $this->Autocomplete->initAutocomplete(); ?> 
+echo $this->Autocomplete->initAutocomplete();
 
 for initializing
 
-<?php
-echo $this->Autocomplete->setAutocomplete(array(
-	'element' => 'id_of_your_input_field',
-	'url' => 'http://localhost',
-	'model' => 'pages', 
-	'field' => 'title', 
-	'order' => 'ASC',
-	'minLength' => 2
+echo $this->Autocomplete->setAutocomplete(array( <br>
+	'element' => 'id', <br>
+	'url' => 'http://localhost', <br>
+	'model' => 'pages', <br> 
+	'field' => 'title', <br> 
+	'order' => 'ASC', <br>
+	'minLength' => 2 <br>
 ));
-?>
 
 to set the parameters.
 
