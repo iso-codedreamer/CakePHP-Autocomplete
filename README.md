@@ -16,8 +16,7 @@ jQuery UI Autocomplete
 
 - upload config & src folders in the /app/Plugin/Autocomplete folder
 - upload webroot folder in /app/webroot/
-- activate the plugin in /app/Application.php
-`$this->addPlugin('Autocomplete',  array('bootstrap' => true, 'routes' => true));`
+- activate the plugin in /app/Application.php `$this->addPlugin('Autocomplete',  array('bootstrap' => true, 'routes' => true));`
 
 
 <h3>In the controller</h3>
@@ -26,8 +25,10 @@ jQuery UI Autocomplete
 
 <h3>In the View</h3>
 
-`echo $this->Autocomplete->initAutocomplete();` for initializing
+-Initialize Autocomplete plugin in view
+`echo $this->Autocomplete->initAutocomplete();`
 
+-Set parameters for autocomplete field
 ```
 <?php
 $autocompleteScript = $this->Autocomplete->setAutocomplete(array(
@@ -46,7 +47,6 @@ $autocompleteScript = $this->Autocomplete->setAutocomplete(array(
     });
 </script>
 ```
-to set the parameters. 
 
 <h2>License</h2>
 
