@@ -17,21 +17,18 @@ jQuery UI Autocomplete
 - upload config & src folders in the /app/Plugin/Autocomplete folder
 - upload webroot folder in /app/webroot/
 - activate the plugin in /app/Application.php
-
-$this->addPlugin('Autocomplete',  array('bootstrap' => true, 'routes' => true));
+`$this->addPlugin('Autocomplete',  array('bootstrap' => true, 'routes' => true));`
 
 
 <h3>In the controller</h3>
 
-public $helpers = array('Autocomplete.Autocomplete');
+`public $helpers = array('Autocomplete.Autocomplete');`
 
 <h3>In the View</h3>
 
-echo $this->Autocomplete->initAutocomplete();
+`echo $this->Autocomplete->initAutocomplete();` for initializing
 
-for initializing
-
-
+```
 <?php
 $autocompleteScript = $this->Autocomplete->setAutocomplete(array(
     'element' => 'parishionerName',
@@ -41,7 +38,6 @@ $autocompleteScript = $this->Autocomplete->setAutocomplete(array(
     'order' => 'ASC',
     'minLength' => 2
 ));
-
 ?>
 <script>
 	//only execute after finishing DOM loading so that external dependencies i.e jQuery and jQuery autocomplete are loaded
@@ -49,7 +45,7 @@ $autocompleteScript = $this->Autocomplete->setAutocomplete(array(
         <?php echo $autocompleteScript; ?>
     });
 </script>
-
+```
 to set the parameters. 
 
 <h2>License</h2>
