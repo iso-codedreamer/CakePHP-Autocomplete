@@ -1,5 +1,7 @@
 <?php
 
+use Cake\Core\Configure;
+
 Configure::write(
     'Autocomplete',
     array(
@@ -7,11 +9,11 @@ Configure::write(
 		'backgroundColor' => '#000000',
 		'color' => '#ffffff',
 		'includeCss' => array(
-			'jquery-ui.min.css', 
+			'jquery-ui.min.css',
+			'jquery-ui.structure.min.css',
 			'jquery-ui.theme.min.css'
 		),
 		'includeJs' => array(
-			'jquery.js',
 			'jquery-ui.min.js'
 		)
 	)

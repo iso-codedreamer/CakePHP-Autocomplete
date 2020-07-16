@@ -1,11 +1,12 @@
 # CakePHP-Autocomplete
 Autocomplete plugin for CakePHP
+Updated for CakePHP 3
 
 <h2>Requirements</h2>
 
 HTTP Server. For example: Apache.
 PHP 5.2.8 or greater.
-CakePHP 2.5.1+
+CakePHP 3+
 
 <h2>Dependencies</h2>
 
@@ -13,12 +14,12 @@ jQuery UI Autocomplete
 
 <h2>Installation</h2>
 
-- upload Config, Controller, View and webroot folder in the /app/Plugin/Autocomplete folder
-- activate the plugin in /app/Config/bootstrap.php
+- upload config & src folders in the /app/Plugin/Autocomplete folder
+- upload webroot folder in /app/webroot/
+- activate the plugin in /app/Application.php
 
-CakePlugin::loadAll(array( <br>
-    'Autocomplete' => array('bootstrap' => true, 'routes' => true)
-));
+$this->addPlugin('Autocomplete',  array('bootstrap' => true, 'routes' => true));
+
 
 <h3>In the controller</h3>
 
@@ -30,16 +31,26 @@ echo $this->Autocomplete->initAutocomplete();
 
 for initializing
 
-echo $this->Autocomplete->setAutocomplete(array( <br>
-	'element' => 'id', <br>
-	'url' => 'http://localhost/autocomplete', <br>
-	'model' => 'pages', <br> 
-	'field' => 'title', <br> 
-	'order' => 'ASC', <br>
-	'minLength' => 2 <br>
+
+<?php
+$autocompleteScript = $this->Autocomplete->setAutocomplete(array(
+    'element' => 'parishionerName',
+    'url' => Router::url('/autocomplete', true),
+    'model' => 'Parishioners',
+    'field' => 'name',
+    'order' => 'ASC',
+    'minLength' => 2
 ));
 
-to set the parameters.
+?>
+<script>
+	//only execute after finishing DOM loading so that external dependencies i.e jQuery and jQuery autocomplete are loaded
+	document.addEventListener("DOMContentLoaded", function(event) {
+        <?php echo $autocompleteScript; ?>
+    });
+</script>
+
+to set the parameters. 
 
 <h2>License</h2>
 
