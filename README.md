@@ -25,10 +25,10 @@ jQuery UI Autocomplete
 
 <h3>In the View</h3>
 
--Initialize Autocomplete plugin in view
+- Initialize Autocomplete plugin in view
 `echo $this->Autocomplete->initAutocomplete();`
 
--Set parameters for autocomplete field
+- Set parameters for autocomplete field
 ```
 <?php
 $autocompleteScript = $this->Autocomplete->setAutocomplete(array(
