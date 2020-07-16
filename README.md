@@ -31,10 +31,10 @@ jQuery UI Autocomplete
 ```
 <?php
 $autocompleteScript = $this->Autocomplete->setAutocomplete(array(
-    'element' => 'parishionerName',
+    'element' => 'id',
     'url' => Router::url('/autocomplete', true),
-    'model' => 'Parishioners',
-    'field' => 'name',
+    'model' => 'Model',
+    'field' => 'field',
     'order' => 'ASC',
     'minLength' => 2
 ));
