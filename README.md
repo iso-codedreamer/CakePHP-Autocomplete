@@ -1,11 +1,8 @@
 # CakePHP-Autocomplete
-Autocomplete plugin for CakePHP
+Autocomplete plugin for CakePHP<br/>
 Updated for CakePHP 3
 
 <h2>Requirements</h2>
-
-HTTP Server. For example: Apache.
-PHP 5.2.8 or greater.
 CakePHP 3+
 
 <h2>Dependencies</h2>
